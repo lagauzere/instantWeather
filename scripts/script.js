@@ -7,6 +7,8 @@ let probaPluie = document.getElementById('probaPluie');
 let heureSoleil = document.getElementById('heureSoleil');
 let nomVille = document.getElementById('nomVille');
 let labelCommuneSelect = document.getElementById('labelCommuneSelect');
+let nbJours = document.getElementById("nbJours");
+
 
 let codeInsee;
 let selectedCommune
@@ -66,15 +68,14 @@ boutonValidation.addEventListener('click', () => {
   boutonValidation.style.display = 'none';
   labelCommuneSelect.style.display = 'none';
   selectedCommune = communeSelect.value
-  fetch(`https://api.meteo-concept.com/api/forecast/daily/0?token=4bba169b3e3365061d39563419ab23e5016c0f838ba282498439c41a00ef1091&insee=${selectedCommune}`)
+  fetch(`https://api.meteo-concept.com/api/forecast/daily?token=4bba169b3e3365061d39563419ab23e5016c0f838ba282498439c41a00ef1091&insee=${selectedCommune}`)
     .then(response => response.json())
     .then(data => {
       nomVille.textContent = data.city.name;
       console.log('Détails de la commune sélectionnée:', data)
-      tempMax.textContent = 'Température maximale : ' + data.forecast.tmax + '°C';
-      tempMin.textContent = 'Température minimale : ' + data.forecast.tmin + '°C'
-      probaPluie.textContent = 'Probabilité de pluie : ' + data.forecast.probarain + ' %'
-      heureSoleil.textContent = 'Ensoleillement : ' + data.forecast.sun_hours + ' heures'
+      for(let i = 0; i < nbJours.value; i++){
+         weatherCard(data, i);
+      }
     })
     .catch(error => {
       console.error('Erreur lors de la requête API:', error)
