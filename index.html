@@ -11,22 +11,32 @@
 </head>
 
 <body>
+    <header>
+        <h1>Instant Weather</h1>
+    </header>
     <div class="container">
-            <input type="text" id="codePostal" name="tempsTimerPause" placeholder="Entrez un code postal..."/>
-            <select id="communeSelect"></select>   
-            <button id="validation">clic</button>
-            <p>température max : </p>
-            <p id="tempMax"></p>
-            <br>
-            <p>température min :</p>
-            <p id="tempMin"></p>
-            <br>
-            <p>Probabilité de pluie :</p>
-            <p id="probaPluie"></p>
-            <br>
-            <p>nombre d'heures d'ensoleillement</p>
-            <p id="heureSoleil"></p>
+        <label for="codePostal">Entrez votre code postal :</label>
+        <input type="text" id="codePostal" name="codePostal" placeholder="Entrez un code postal..." />
+        <br>
+        <label for="communeSelect" id="labelCommuneSelect">Choississez votre commune :</label>
+        <select id="communeSelect"></select>
+        <br>
+        <button id="validation">Valider</button>
+        <p id="nomVille"></p>
+
+        <p id="tempMax"></p>
+
+    
+        <p id="tempMin"></p>
+
+        
+        <p id="probaPluie"></p>
+
+        
+        <p id="heureSoleil"></p>
+
     </div>
+    <script src="scripts/script.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 

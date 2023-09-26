@@ -3,6 +3,9 @@ h1 {
     font-family: 'Mooli', sans-serif;
 }
 
+.container {
+    text-align: center;
+}
 body {
     background: linear-gradient(217deg, rgba(12, 142, 255, 0.8), rgba(255, 0, 0, 0) 70.71%),
         linear-gradient(127deg, rgba(255, 242, 242, 0.801), rgba(0, 255, 0, 0) 70.71%),
@@ -10,4 +13,16 @@ body {
     background-repeat: no-repeat;
     padding-bottom: 40%;
     text-align: center;
+}
+
+button {
+    display: inline-flex;
+}
+
+select {
+    display:inline-flex;
+}
+
+label {
+    background: none;
 }
