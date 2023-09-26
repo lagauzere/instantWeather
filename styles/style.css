@@ -14,18 +14,6 @@ body {
     text-align: center;
 }
 
-button {
-    display: inline-flex;
-}
-
-select {
-    display:inline-flex;
-}
-
-label {
-    background: none;
-}
-
 html{
     height: 100%;
 }
