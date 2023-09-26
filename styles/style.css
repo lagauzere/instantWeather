@@ -1,4 +1,4 @@
-h1 {
+h1, label{
     color: rgb(119, 119, 133);
     font-family: 'Mooli', sans-serif;
 }
@@ -28,4 +28,12 @@ html{
         margin: 0 10%;
     }
 
+}
+
+label{
+    font-weight: bold;
+}
+
+#weatherSection{
+    color: rgb(53, 52, 61);
 }
