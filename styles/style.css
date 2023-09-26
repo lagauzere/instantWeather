@@ -14,15 +14,3 @@ body {
     padding-bottom: 40%;
     text-align: center;
 }
-
-button {
-    display: inline-flex;
-}
-
-select {
-    display:inline-flex;
-}
-
-label {
-    background: none;
-}
