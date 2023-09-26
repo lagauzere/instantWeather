@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Interface Météo</title>
 </head>
-<body>
-    
 
-    <script src="js/script.js"></script>
+<body>
+    <div class="container">
+            <input type="text" id="codePostal" name="tempsTimerPause" placeholder="Entrez un code postal..."/>
+            <select id="communeSelect"></select>   
+            <button id="validation">clic</button>
+            <p>température max : </p>
+            <p id="tempMax"></p>
+            <br>
+            <p>température min :</p>
+            <p id="tempMin"></p>
+            <br>
+            <p>Probabilité de pluie :</p>
+            <p id="probaPluie"></p>
+            <br>
+            <p>nombre d'heures d'ensoleillement</p>
+            <p id="heureSoleil"></p>
+    </div>
+    <script src="scripts/app.js"></script>
 </body>
+
 </html>
