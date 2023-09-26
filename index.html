@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -11,14 +11,23 @@
 </head>
 
 <body>
-
-    <h1>Instant Weather</h1>
-    <br><br><br><br>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea laudantium dolorum iusto repellendus. A corporis
-        exercitationem officia reiciendis culpa quia, iste ipsam odit possimus unde vero optio natus obcaecati
-        accusamus.</p>
-
-    <script src="scripts/script.js"></script>
+    <div class="container">
+            <input type="text" id="codePostal" name="tempsTimerPause" placeholder="Entrez un code postal..."/>
+            <select id="communeSelect"></select>   
+            <button id="validation">clic</button>
+            <p>température max : </p>
+            <p id="tempMax"></p>
+            <br>
+            <p>température min :</p>
+            <p id="tempMin"></p>
+            <br>
+            <p>Probabilité de pluie :</p>
+            <p id="probaPluie"></p>
+            <br>
+            <p>nombre d'heures d'ensoleillement</p>
+            <p id="heureSoleil"></p>
+    </div>
+    <script src="scripts/app.js"></script>
 </body>
 
 </html>
