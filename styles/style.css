@@ -5,6 +5,10 @@ h1 {
 
 .container {
     text-align: center;
+    border: 2px solid black;
+    border-radius: 2%;
+    padding-top: 25px;
+    margin: 0 35%;
 }
 body {
     background: linear-gradient(217deg, rgba(12, 142, 255, 0.8), rgba(255, 0, 0, 0) 70.71%),
