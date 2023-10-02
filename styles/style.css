@@ -39,25 +39,7 @@ label{
 }
 
 
-.option{
-    border-style: solid;
-    display: block;
-
-}
-
-.check{
-    
-    
-}
-
-
-.option{
-    border-style: solid;
-    display: block;
-
-}
-
-.check{
-    
-    
+#weatherSection{
+    color: green;
+    display: flex;
 }
