@@ -8,9 +8,9 @@ function weatherCard(data, i){
     let afficheNbJours = document.createElement('p');
     
 
-    i += 1
+    i += 1;
     afficheNbJours.textContent = 'Jour ' + i;
-    i -=1
+    i -=1;
     tempMax.textContent = 'Température maximale : ' + data.forecast[i].tmax + '°C';
       tempMin.textContent = 'Température minimale : ' + data.forecast[i].tmin + '°C';
       probaPluie.textContent = 'Probabilité de pluie : ' + data.forecast[i].probarain + ' %';
@@ -22,5 +22,5 @@ function weatherCard(data, i){
       section.appendChild(probaPluie);
       section.appendChild(heureSoleil);
       section.appendChild(space);
-      
+
 }
