@@ -8,6 +8,7 @@ let heureSoleil = document.getElementById('heureSoleil');
 let nomVille = document.getElementById('nomVille');
 let labelCommuneSelect = document.getElementById('labelCommuneSelect');
 let nbJours = document.getElementById("nbJours");
+let section = document.getElementById("weatherSection");
 
 
 let codeInsee;
@@ -73,6 +74,10 @@ boutonValidation.addEventListener('click', () => {
     .then(data => {
       nomVille.textContent = data.city.name;
       console.log('Détails de la commune sélectionnée:', data)
+      while(section.firstChild){
+        section.removeChild(section.firstChild);
+      }
+
       for(let i = 0; i < nbJours.value; i++){
          weatherCard(data, i);
       }

@@ -1,5 +1,6 @@
 function weatherCard(data, i){
     let section = document.getElementById("weatherSection");
+  
     let tempMax = document.createElement('div');
     let tempMin = document.createElement('div');
     let probaPluie = document.createElement('div');
