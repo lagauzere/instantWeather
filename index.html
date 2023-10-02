@@ -16,26 +16,31 @@
     </header>
     <div class="container">
         <div class="option">
-            <legend>Choose your monster's features:</legend>
+            <legend>Informations supplémentaires:</legend>
 
                 <div>
                     <input class="check" type="checkbox" id="op1" name="op1"  />
-                    <label for="op1">op1</label>
+                    <label for="op1">Latitude décimale </label>
                 </div>
 
                 <div>
                     <input class="check" type="checkbox" id="op2" name="op2" />
-                    <label for="op2">op2</label>
+                    <label for="op2">Longitude décimale </label>
                 </div>
 
                 <div>
                     <input class="check" type="checkbox" id="op3" name="op3" />
-                    <label for="op3">op3</label>
+                    <label for="op3">Cumul de pluie sur la journée </label>
                 </div>
 
                 <div>
                     <input class="check" type="checkbox" id="op4" name="op4" />
-                    <label for="op4">op3</label>
+                    <label for="op4">Vent moyen en km/h</label>
+                </div>
+
+                <div>
+                    <input class="check" type="checkbox" id="op5" name="op5" />
+                    <label for="op5">Direction du vent</label>
                 </div>
 
         </div>
@@ -45,7 +50,7 @@
         <input type="text" id="codePostal" name="codePostal" placeholder="Entrez un code postal..." />
         <br>
         <label for="nbJour">Nombre de jour de prévision :</label>
-        <input type="number" id="nbJours" value="1" name="tentacles" min="1" max="7" />
+        <input type="number" id="nbJours" value="1" name="nbJours" min="1" max="7" />
         <br>
         <label for="communeSelect" id="labelCommuneSelect">Choississez votre commune :</label>
         <select id="communeSelect"></select>
