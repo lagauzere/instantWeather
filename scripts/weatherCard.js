@@ -36,7 +36,7 @@ function weatherCard(data, i){
         imgMeteo.src = 'images/clear.png'
         imgMeteo.alt = 'Soleil'
       }
-      if(x > 1 && x <= 5){
+      if(x >= 1 && x <= 5){
         imgMeteo.src = 'images/cloud.png';
         imgMeteo.alt = 'Nuageux'
       } 
