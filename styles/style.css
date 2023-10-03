@@ -43,13 +43,13 @@ label{
     grid-template-columns: 0.25fr 0.25fr ;
     grid-gap: 50px;
     font-size: 20px;
-
 }
 
 #jours{
     border: solid 2px rgb(118, 179, 197);
     border-radius: 20px;
     padding-bottom: 20px;
+    
 }
 
 

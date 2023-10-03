@@ -4,6 +4,7 @@ function weatherCard(data, i){
     let tempMin = document.createElement('div');
     let probaPluie = document.createElement('div');
     let heureSoleil = document.createElement('div');
+    let jours = document.createElement('div');
     let space =document.createElement('br');
     let imgMeteo = document.createElement('img');
     let afficheNbJours = document.createElement('p');
@@ -12,6 +13,8 @@ function weatherCard(data, i){
     let cumulPluie = document.getElementById('op3')
     let ventMoyen = document.getElementById('op4')
     let directionVent = document.getElementById('op5')
+
+    jours.id="jours";
 
     let dateJour = new Date()
     let x = data.forecast[i].weather;
@@ -53,44 +56,44 @@ function weatherCard(data, i){
         imgMeteo.alt = 'Neige'
       }
 
-      section.appendChild(imgMeteo)
-      section.appendChild(afficheNbJours);
-      section.appendChild(tempMax);
-      section.appendChild(tempMin);
-      section.appendChild(probaPluie);
-      section.appendChild(heureSoleil);
-      section.appendChild(space);
+      jours.appendChild(imgMeteo)
+      jours.appendChild(afficheNbJours);
+      jours.appendChild(tempMax);
+      jours.appendChild(tempMin);
+      jours.appendChild(probaPluie);
+      jours.appendChild(heureSoleil);
+      jours.appendChild(space);
       
-      
+      section.appendChild(jours);
       
 
       if(latitude.checked){
         let latitudeAffichage = document.createElement('div');
         latitudeAffichage.textContent = 'Latitude décimale : ' + data.forecast[i].latitude
-        section.appendChild(latitudeAffichage);
+        jours.appendChild(latitudeAffichage);
       }
 
       if(longitude.checked){
         let longitudeAffichage = document.createElement('div');
         longitudeAffichage.textContent = 'Longitude décimale : ' + data.forecast[i].longitude
-        section.appendChild(longitudeAffichage);
+        jours.appendChild(longitudeAffichage);
       }
 
       if(cumulPluie.checked){
         let cumulPluieAffichage = document.createElement('div');
         cumulPluieAffichage.textContent = 'Cumul de pluie  : ' + data.forecast[i].rr10 + ' mm'
-        section.appendChild(cumulPluieAffichage);
+        jours.appendChild(cumulPluieAffichage);
       }
 
       if(ventMoyen.checked){
         let ventMoyenAffichage = document.createElement('div');
         ventMoyenAffichage.textContent = 'Vent moyen : ' + data.forecast[i].wind10m + ' km/h'
-        section.appendChild(ventMoyenAffichage);
+        jours.appendChild(ventMoyenAffichage);
       }
 
       if(directionVent.checked){
         let directionVentAffichage = document.createElement('div');
         directionVentAffichage.textContent = 'Direction du vent : ' + data.forecast[i].dirwind10m + ' °'
-        section.appendChild(directionVentAffichage);
+        jours.appendChild(directionVentAffichage);
       }
 }
