@@ -1,4 +1,4 @@
-
+let section = document.getElementById("weatherSection");
 let codePostal = document.getElementById('codePostal');
 let boutonValidation = document.getElementById('validation');
 let tempMax = document.getElementById('tempMax');
@@ -19,7 +19,14 @@ boutonValidation.style.display = 'none';
 communeSelect.style.display = 'none';
 labelCommuneSelect.style.display = 'none';
 
+nbJours.addEventListener('change', () => {
+  if(nbJours.value >= 7){
+   nbJours.textContent = 7;
+   nbJours.value = 7;
+  }
+})
 codePostal.addEventListener('input', () => {
+  
   communeSelect.style.display = 'none';
   let valeurCodePostal = codePostal.value
   if (/^\d{5}$/.test(valeurCodePostal)) {
