@@ -1,4 +1,4 @@
-h1, label, legend{
+h1, label, legend, #nomVille{
     color: rgb(119, 119, 133);
     font-family: 'Mooli', sans-serif;
 }
@@ -20,7 +20,7 @@ body {
 }
 
 html{
-    height: 100%;
+    height: 130%;
 }
 
 @media (max-width : 500px) {
@@ -47,13 +47,14 @@ label{
 
 #jours{
     border: solid 2px black;
-    padding: 0 20px;
     border-radius: 20px;
+    padding-bottom: 20px;
 }
 
 
 #nomVille{
-    font-size: 50px;
+    font-size: 45px;
+    margin-top: auto;
 }
 /*
 #jours:last-of-type{
@@ -61,3 +62,13 @@ label{
     margin-right: auto;
     margin-left: auto;
 }*/
+
+img{
+    width: 150px;
+    float:center;
+}
+
+h1{
+    display: inline-block;
+    vertical-align: 52px;
+}
