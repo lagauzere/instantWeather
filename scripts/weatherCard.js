@@ -97,3 +97,23 @@ function weatherCard(data, i){
         jours.appendChild(directionVentAffichage);
       }
 }
+
+
+window.onload=function() {
+
+  let heures = new Date().getHours();
+  let textes=document.getElementsByClassName('texte');
+   
+  if(heures>20 || heures<7){
+
+   document.body.style.backgroundColor='black';
+   
+   for(i=0;i<textes.length;i++){
+    textes[i].style.color='white';
+   }
+   
+  }
+
+
+  }
+  
