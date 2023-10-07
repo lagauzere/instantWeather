@@ -1,7 +1,12 @@
-h1, label, legend, #nomVille, #weatherSection{
+h1,
+label,
+legend,
+#nomVille,
+#weatherSection {
     color: rgb(119, 119, 133);
     font-family: 'Mooli', sans-serif;
 }
+
 /*
 .container {
     text-align: center;
@@ -19,44 +24,45 @@ body {
     text-align: center;
 }
 
-html{
+html {
     height: auto;
     min-height: 100%;
 }
 
 @media (max-width : 500px) {
-    
-    .container{
+
+    .container {
         margin: 0 10%;
     }
 
 }
 
-label{
+label {
     font-weight: bold;
 }
 
 
-#weatherSection{
+#weatherSection {
     margin-left: 33%;
     display: grid;
-    grid-template-columns: 0.25fr 0.25fr ;
+    grid-template-columns: 0.25fr 0.25fr;
     grid-gap: 50px;
     font-size: 20px;
 }
 
-#jours{
+#jours {
     border: solid 2px rgb(118, 179, 197);
     border-radius: 20px;
     padding-bottom: 20px;
-    
+
 }
 
 
-#nomVille{
+#nomVille {
     font-size: 45px;
     margin-top: auto;
 }
+
 /*
 #jours:last-of-type{
     border: solid 2px black;
@@ -64,32 +70,37 @@ label{
     margin-left: auto;
 }*/
 
-img{
+img {
     width: 150px;
-    float:center;
+    float: center;
 }
 
-h1{
+h1 {
     display: inline-block;
     vertical-align: 52px;
 }
 
-#codePostal, #nbJours, #communeSelect{
+#codePostal,
+#nbJours,
+#communeSelect {
     background-color: #f1f1f1
 }
 
-input[type=text], input[type=number]{
+input[type=text],
+input[type=number] {
     color: rgb(119, 119, 133);
-    border : none;
+    border: none;
     border-bottom: solid;
     margin: 5px;
 }
 
-input[type=text]:focus, input[type=number]:focus{
+input[type=text]:focus,
+input[type=number]:focus {
     outline: none;
 }
 
-#communeSelect, #validation{
+#communeSelect,
+#validation {
     color: rgb(119, 119, 133);
 }
 
@@ -98,15 +109,13 @@ select {
     border: none;
     border-radius: 4px;
     background-color: #f1f1f1;
-  }
+}
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
-    /* For iOS < 15 to remove gradient background */
     background-color: #fff;
-    /* Not removed via appearance */
-    margin: 0;
+    margin-left: 650px;
     font: inherit;
     color: currentColor;
     width: 1.15em;
@@ -118,7 +127,7 @@ input[type="checkbox"]{
     place-content: center;
 }
 
-.form-control + .form-control {
+.form-control+.form-control {
     margin-top: 1em;
 }
 
@@ -132,33 +141,38 @@ input[type="checkbox"]::before {
     background-color: CanvasText;
     transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-  }
+}
 
-  input[type="checkbox"]:checked::before {
+input[type="checkbox"]:checked::before {
     transform: scale(1);
-  }
-  
-  :root {
-  --form-control-disabled: #959495;
+}
+
+:root {
+    --form-control-disabled: #959495;
 }
 
 input[type="checkbox"]:disabled {
-  --form-control-color: var(--form-control-disabled);
+    --form-control-color: var(--form-control-disabled);
 
-  color: var(--form-control-disabled);
-  cursor: not-allowed;
+    color: var(--form-control-disabled);
+    cursor: not-allowed;
 }
 
 .form-control--disabled {
     color: var(--form-control-disabled);
     cursor: not-allowed;
-  }
+}
 
-  .form-control {
+.form-control {
     color: rgb(119, 119, 133);
     font-family: 'Mooli', sans-serif;
     line-height: 1.1;
     display: grid;
-  grid-template-columns: 1em auto;
-  gap: 0.5em;
-  }
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+.option div .texte{
+    text-align: left;
+    text-indent: 45%;
+}
