@@ -107,7 +107,9 @@ window.onload = function () {
 
   if (heures >= 20 || heures < 7) {
 
-    backgroundGradient = "linear-gradient(217deg, rgba(0, 0, 0, 0.8), rgba(255, 0, 0, 0) 100%), linear-gradient(127deg, rgba(77, 70, 70, 0.801), rgba(0, 255, 0, 0) 100%),linear-gradient(336deg, rgba(80, 78, 78, 0.89), rgba(0, 0, 255, 0) 100%)";
+    //backgroundGradient = "linear-gradient(217deg, rgba(0, 0, 0, 0.8), rgba(255, 0, 0, 0) 100%), linear-gradient(127deg, rgba(77, 70, 70, 0.801), rgba(0, 255, 0, 0) 100%),linear-gradient(336deg, rgba(80, 78, 78, 0.89), rgba(0, 0, 255, 0) 100%)";
+
+    backgroundGradient="linear-gradient(black,midnightblue,black)";
 
     for (i = 0; i < textes.length; i++) {
       textes[i].style.color = 'white';
@@ -116,6 +118,8 @@ window.onload = function () {
   }
 
   document.body.style.backgroundImage = backgroundGradient;
+
+
 
 }
 
