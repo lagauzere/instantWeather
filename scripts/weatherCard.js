@@ -30,7 +30,7 @@ function weatherCard(data, i) {
   heureSoleil.textContent = 'Ensoleillement : ' + data.forecast[i].sun_hours + ' heures';
 
 
-  if (x >= 40 && x <= 48) {
+  if ((x >= 40 && x <= 48) || (x >= 210 && x <= 222) ) {
     imgMeteo.src = 'images/rain.png';
     imgMeteo.alt = 'Pluie';
 
