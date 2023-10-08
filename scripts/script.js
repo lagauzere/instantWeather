@@ -35,6 +35,7 @@ nbJours.addEventListener('change', () => {
     boutonValidation.style.display = 'inline-flex';
   }
 })
+
 codePostal.addEventListener('input', () => {
 
   communeSelect.style.display = 'none';
@@ -48,7 +49,7 @@ codePostal.addEventListener('input', () => {
       .then(response => response.json())
       .then(data => {
         console.log(data)
-        if (data && data.length === 1){
+        if (data && data.length === 1) {
           communeSelect.style.display = 'inline-flex'
           communeSelect.innerHTML = ''
           let choix = document.createElement('option');
@@ -82,6 +83,36 @@ codePostal.addEventListener('input', () => {
     boutonValidation.style.display = 'none';
   }
 })
+
+boutonValidation.addEventListener('click', () => {
+  communeSelect.style.display = 'none'
+  boutonValidation.style.display = 'none';
+  labelCommuneSelect.style.display = 'none';
+  selectedCommune = communeSelect.value
+  fetch(`https://api.meteo-concept.com/api/forecast/daily?token=4bba169b3e3365061d39563419ab23e5016c0f838ba282498439c41a00ef1091&insee=${selectedCommune}`)
+    .then(response => response.json())
+    .then(data => {
+      nomVille.textContent = data.city.name;
+      console.log('Détails de la commune sélectionnée:', data)
+      while (section.firstChild) {
+        section.removeChild(section.firstChild);
+      }
+
+      for (let i = 0; i < nbJours.value; i++) {
+        if (nbJours.value == 1) {
+          section.style.marginLeft = "43%";
+          section.style.display = "grid";
+          section.style.gridTemplateColumns = "0.25fr 0.25fr"
+          section.style.gap = "50px";
+          section.style.fontSize = "20px";
+        } 
+        weatherCard(data, i);
+      }
+    })
+    .catch(error => {
+      console.error('Erreur lors de la requête API:', error)
+    })
+});
 
 boutonValidation.addEventListener('click', () => {
   communeSelect.style.display = 'none'

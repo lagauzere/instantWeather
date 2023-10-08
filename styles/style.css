@@ -1,6 +1,6 @@
 h1,
 label,
-legend,
+#legend,
 #nomVille,
 #weatherSection {
     color: rgb(119, 119, 133);
@@ -34,7 +34,7 @@ label {
 
 
 #weatherSection {
-    margin-left: 43%;
+    margin-left: 33%;
     display: grid;
     grid-template-columns: 0.25fr 0.25fr;
     grid-gap: 50px;
@@ -55,9 +55,10 @@ label {
 }
 
 
+
 img {
     width: 150px;
-    float: center;
+    
 }
 
 h1 {
@@ -73,7 +74,7 @@ h1 {
 
 input[type=text],
 input[type=number] {
-    color: rgb(0, 0, 0);
+    color: rgb(3, 3, 3);
     border: none;
     border-bottom: solid;
     margin: 5px;
@@ -99,10 +100,7 @@ select {
 input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
-    /* For iOS < 15 to remove gradient background */
     background-color: #fff;
-    /* Not removed via appearance */
-    margin: 0;
     font: inherit;
     color: currentColor;
     width: 1.15em;
@@ -151,7 +149,7 @@ input[type="checkbox"]:disabled {
 }
 
 .form-control {
-    color: #f1f1f1;
+    color: rgb(119, 119, 133);
     font-family: 'Mooli', sans-serif;
     line-height: 1.1;
     display: grid;
@@ -159,8 +157,9 @@ input[type="checkbox"]:disabled {
     gap: 0.5em;
 }
 
-input {
-    margin-left: 50%
+.option div .texte{
+    text-align: left;
+    text-indent: 45%;
 }
 
 #op1,
@@ -177,9 +176,4 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#infoSup {
-    font-family: 'Mooli', sans-serif;
-    font-size: 125%;
 }

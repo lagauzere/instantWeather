@@ -30,16 +30,11 @@ function weatherCard(data, i) {
   heureSoleil.textContent = 'Ensoleillement : ' + data.forecast[i].sun_hours + ' heures';
 
 
-  if ((x >= 40 && x <= 48) || (x >= 10 && x <= 15)) {
+  if (x >= 40 && x <= 48) {
     imgMeteo.src = 'images/rain.png';
     imgMeteo.alt = 'Pluie';
-  }
 
-  if((x >= 211 && x <= 222)){
-    imgMeteo.src = 'images/rain.png';
-    imgMeteo.alt = 'Pluie';
   }
-
   if (x == 0) {
     imgMeteo.src = 'images/clear.png'
     imgMeteo.alt = 'Soleil'
@@ -108,17 +103,20 @@ window.onload = function () {
 
   let heures = new Date().getHours();
   let textes = document.getElementsByClassName('texte');
+  let labelTexte = document.getElementsByClassName('form-control');
+  let backgroundGradient;
 
-  if (heures > 20 || heures < 7) {
-
-    document.body.style.backgroundColor = 'black';
-
+  if (heures >= 20 || heures < 7) {
+    backgroundGradient = "linear-gradient(black,midnightblue,black)";
+    document.body.style.backgroundImage = backgroundGradient;
     for (i = 0; i < textes.length; i++) {
       textes[i].style.color = 'white';
     }
-
+    for(let j = 0; j < labelTexte.length; j++) {
+      labelTexte[j].style.color = 'white';
+    }
   }
 
-
+  
 }
 
