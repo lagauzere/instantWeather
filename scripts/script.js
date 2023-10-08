@@ -48,7 +48,7 @@ codePostal.addEventListener('input', () => {
       .then(response => response.json())
       .then(data => {
         console.log(data)
-        if (data && data.length === 1) {
+        if (data && data.length === 1){
           communeSelect.style.display = 'inline-flex'
           communeSelect.innerHTML = ''
           let choix = document.createElement('option');
@@ -67,10 +67,11 @@ codePostal.addEventListener('input', () => {
               let choix = document.createElement('option')
               choix.value = commune.code
               choix.textContent = commune.nom
-              communeSelect.appendChild(choix)
-              communeSelect.style.display = "inline-flex"
+              communeSelect.appendChild(choix);
             })
           }
+        } else {
+          boutonValidation.style.display = 'none';
         }
       })
 

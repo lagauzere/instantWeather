@@ -34,7 +34,7 @@ label {
 
 
 #weatherSection {
-    margin-left: 33%;
+    margin-left: 43%;
     display: grid;
     grid-template-columns: 0.25fr 0.25fr;
     grid-gap: 50px;
@@ -151,7 +151,7 @@ input[type="checkbox"]:disabled {
 }
 
 .form-control {
-    color: rgb(119, 119, 133);
+    color: #f1f1f1;
     font-family: 'Mooli', sans-serif;
     line-height: 1.1;
     display: grid;
@@ -169,6 +169,7 @@ input {
 #op4,
 #op5 {
     text-align: center;
+    box-shadow: inset 1em 1em var(--form-control-color);
 }
 
 
@@ -176,4 +177,9 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#infoSup {
+    font-family: 'Mooli', sans-serif;
+    font-size: 125%;
 }
