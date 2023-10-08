@@ -8,7 +8,7 @@ Instant Weather is a web application that allows you to check the current and up
 - Choose your location by entering a postal code or selecting a municipality.
 - Customize the weather information to display using additional options.
 
-## Utilisation
+## Usage
 
 - Enter a postal code or select a municipality to get the corresponding weather forecasts.
 - Choose the number of forecasted days you would like to display.
