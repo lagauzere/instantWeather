@@ -1,6 +1,6 @@
 h1,
 label,
-legend,
+#legend,
 #nomVille,
 #weatherSection {
     color: rgb(119, 119, 133);
@@ -72,7 +72,7 @@ label {
 
 img {
     width: 150px;
-    float: center;
+    /*float: center;*/
 }
 
 h1 {
