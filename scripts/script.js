@@ -105,7 +105,13 @@ boutonValidation.addEventListener('click', () => {
           section.style.gridTemplateColumns = "0.25fr 0.25fr"
           section.style.gap = "50px";
           section.style.fontSize = "20px";
-        } 
+        }  else {
+          section.style.marginLeft = "33%";
+          section.style.display = "grid";
+          section.style.gridTemplateColumns = "0.25fr 0.25fr"
+          section.style.gap = "50px";
+          section.style.fontSize = "20px";
+        }
         weatherCard(data, i);
       }
     })
